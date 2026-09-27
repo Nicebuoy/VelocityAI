@@ -1,0 +1,54 @@
+:root { font-family: Manrope, "Segoe UI", sans-serif; color: #e6edf5; background: transparent; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; background: transparent; }
+button, textarea { font: inherit; }
+button { color: inherit; cursor: pointer; }
+.mini-shell { width: 100vw; height: 100vh; padding: 5px; }
+.mini-orb { width: 66px; height: 66px; border: 1px solid #48bbff; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #66d9ff 0, #0e80e8 34%, #162b8b 68%, #09152f 100%); box-shadow: 0 0 14px #27a6ff83, inset 0 0 14px #b5f1ff73; display: grid; place-items: center; }
+.mini-orb span,.mini-mark { font-weight: 800; font-size: 24px; color: #f3fbff; text-shadow: 0 0 9px #a9e8ff; }
+.mini-panel { width: 100%; height: 100%; display: flex; flex-direction: column; overflow: hidden; border: 1px solid #273545; border-radius: 13px; background: #0b1119; box-shadow: 0 14px 44px #0009; }
+.mini-header { flex: 0 0 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 11px; border-bottom: 1px solid #1d2935; background: #101923; }
+.mini-brand { display: inline-flex; align-items: center; gap: 8px; border: 0; padding: 0; background: none; font-size: 11px; letter-spacing: .11em; font-weight: 800; }
+.mini-brand small { margin-left: 3px; color: #6ec5ff; font-size: 9px; }
+.mini-mark { width: 26px; height: 26px; display: grid; place-items: center; border: 1px solid #3a8ef4; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #56cbff, #172c8b 70%); font-size: 14px; }
+.mini-close { width: 26px; height: 26px; border: 0; border-radius: 6px; background: #1b2733; color: #aebccd; font-size: 18px; line-height: 1; }
+.mini-content { overflow: auto; padding: 13px; scrollbar-color: #324357 transparent; }
+.mini-intro > span,.mini-label { color: #7390a9; font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: .1em; }
+.mini-intro h1 { margin: 4px 0 2px; font-size: 18px; }
+.mini-intro p { margin: 0; color: #93a4b6; font-size: 11px; }
+.mini-actions { margin: 12px 0 10px; display: flex; align-items: center; justify-content: space-between; }
+.mini-actions button,.mini-optimize { padding: 8px 10px; border: 1px solid #315274; border-radius: 7px; background: #112536; color: #9bd7ff; font-size: 11px; font-weight: 700; }
+.mini-actions span { color: #63778b; font-family: "DM Mono", monospace; font-size: 8px; }
+.mini-capture { margin: 8px 0; padding: 7px; border: 1px solid #293847; border-radius: 7px; background: #101923; }
+.mini-capture img { display: block; max-width: 100%; max-height: 105px; margin: auto; object-fit: contain; }
+.mini-capture button { margin-top: 5px; border: 0; background: none; color: #8ea0b1; font-size: 10px; }
+.mini-label { display: flex; justify-content: space-between; margin: 9px 0 5px; }
+.mini-label span { color: #a2b5c8; letter-spacing: 0; }
+#mini-code { display: block; width: 100%; height: 130px; resize: vertical; padding: 9px; border: 1px solid #293846; border-radius: 7px; outline: none; background: #080d13; color: #c7d6e5; font-family: "DM Mono", Consolas, monospace; font-size: 10px; line-height: 1.5; }
+#mini-code:focus { border-color: #3489c9; }
+.mini-primary { width: 100%; margin-top: 8px; padding: 9px; border: 0; border-radius: 7px; background: linear-gradient(105deg,#228ad3,#5360d5); font-size: 11px; font-weight: 800; }
+button:disabled { opacity: .5; cursor: default; }
+.mini-status { margin: 8px 0 0; color: #9fc8e7; font-size: 10px; line-height: 1.5; }
+.mini-results { margin-top: 11px; }
+.mini-summary { padding: 8px; border: 1px solid #253747; border-radius: 7px; background: #101a24; color: #bbc9d7; font-size: 10px; line-height: 1.5; }
+.mini-results h2 { display: flex; gap: 6px; align-items: center; margin: 10px 0 6px; font-size: 12px; }
+.mini-results h2 span { color: #90a7bb; }
+.mini-finding { display: flex; width: 100%; flex-direction: column; gap: 3px; margin: 5px 0; padding: 8px; text-align: left; border: 1px solid #263542; border-radius: 7px; background: #0e151d; }
+.mini-finding.selected { border-color: #3c90cf; background: #122333; }
+.mini-finding strong { font-size: 10px; }
+.mini-finding small { color: #90a0b0; font-size: 9px; }
+.mini-severity { text-transform: uppercase; font-family: "DM Mono", monospace; font-size: 8px; color: #a8bcce; }
+.mini-severity.high,.mini-severity.critical { color: #ff8c88; }.mini-severity.medium { color: #ffc777; }
+.mini-empty { color: #aab8c6; font-size: 10px; }
+.mini-optimize { width: 100%; margin: 6px 0; }
+.mini-fix { margin-top: 7px; border: 1px solid #293847; border-radius: 7px; background: #080d13; }
+.mini-fix p { margin: 0; padding: 8px; color: #9fb3c7; font-size: 10px; line-height: 1.5; }
+.mini-fix pre { max-height: 180px; overflow: auto; margin: 0; padding: 8px; border-top: 1px solid #24313e; color: #c5d8e9; white-space: pre-wrap; overflow-wrap: anywhere; font: 9px/1.5 "DM Mono", Consolas, monospace; }
+.mini-snip { position: fixed; inset: 0; z-index: 5; background: #060a0f; }
+.mini-snip video,.mini-snip-cover { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mini-snip video { object-fit: fill; }
+.mini-snip-cover { cursor: crosshair; touch-action: none; }
+.mini-snip-tip { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); padding: 7px 10px; border: 1px solid #435469; border-radius: 6px; background: #101a24eF; font-size: 11px; }
+.mini-selection { position: absolute; border: 2px solid #5dbdff; background: #1c80c833; box-shadow: 0 0 0 9999px #03070a66; }
+.mini-snip-buttons { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 7px; }
+.mini-snip-buttons button { padding: 7px 11px; border: 1px solid #486075; border-radius: 6px; background: #142232; font-size: 10px; }
